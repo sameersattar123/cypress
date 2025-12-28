@@ -1,23 +1,23 @@
 describe("Check UI Elements" , () => {
-    // it("Checking radio buttons" , () => {
+    it("Checking radio buttons" , () => {
 
-    //     // launch the browser
-    //     cy.visit("https://testautomationpractice.blogspot.com/");
+        // launch the browser
+        cy.visit("https://testautomationpractice.blogspot.com/");
 
-    //     // check the check boxes are avaible or not 
-    //     cy.get("input#male").should("be.visible")
+        // check the check boxes are avaible or not 
+        cy.get("input#male").should("be.visible")
 
-    //     cy.get("input#female").should("be.visible")
+        cy.get("input#female").should("be.visible")
 
-    //     // selecting male checkbox and check female should automatically unchecked
-    //    cy.get("input#male").check().should("be.checked")
-    //    cy.get("input#female").should("not.be.checked")
+        // selecting male checkbox and check female should automatically unchecked
+       cy.get("input#male").check().should("be.checked")
+       cy.get("input#female").should("not.be.checked")
 
-    //     // selecting female checkbox and check male checkbox should automatically unchecked
-    //    cy.get("input#female").check().should("be.checked")
-    //    cy.get("input#male").should("not.be.checked")
+        // selecting female checkbox and check male checkbox should automatically unchecked
+       cy.get("input#female").check().should("be.checked")
+       cy.get("input#male").should("not.be.checked")
 
-    // })
+    })
 
     it("Checking check boxes" , () => {
          // launch the browser
@@ -33,6 +33,7 @@ describe("Check UI Elements" , () => {
         // check all the checkbox 
         cy.get("input.form-check-input[type='checkbox']").check().should("be.checked")
 
+        // Check all the checkbox are unchecked
         cy.get("input.form-check-input[type='checkbox']").uncheck().should("not.be.checked")
 
         // check the first and last checkbox and check it should be checked or not  
