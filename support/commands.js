@@ -24,4 +24,13 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+Cypress.Commands.add("getIframe", (iframe) => {
+  return cy
+    .get(iframe)
+    .its("0.contentDocument.body")
+    .should("be.visible")
+    .then(cy.wrap)
+    .invoke("attr", "contenteditable", "true");
+});
+
 /// <reference types="cypress-xpath" />
