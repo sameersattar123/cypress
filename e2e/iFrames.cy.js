@@ -1,3 +1,5 @@
+import "cypress-iframe"
+
 describe("iFrames" , () => {
 
     it.skip("Approach 01" , () => {
@@ -32,9 +34,9 @@ describe("iFrames" , () => {
 
         cy.frameLoaded("#mce_0_ifr");
 
-        cy.iframe("#mce_0_ifr").clear().type("Sameer Sattar {ctrl+a}")
+        cy.iframe("#mce_0_ifr").invoke("attr", "contenteditable", "true").clear().type("Sameer Sattar {ctrl+a}")
 
-        
+
 
     })
 })
